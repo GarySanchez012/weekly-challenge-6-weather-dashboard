@@ -58,7 +58,7 @@ main {
     font-size: 15px;
 }
 
-.history {
+.SearchHistory {
     display: flex;
     flex-direction: column;
 }
@@ -68,6 +68,8 @@ main {
     background-color: lightgray;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .form {
@@ -106,36 +108,25 @@ main {
 .five-day {
     display: flex;
     justify-content: space-between;
+    width: 100%;
  
 }
 
-#day1,
-#day2,
-#day3,
-#day4,
-#day5 {
+#day {
     background-color: rgb(78, 78, 97);
     color: white;
     width: 19%;
     margin-top: 10px;
     padding-top: 5px;
-    height: 150px;
+    height: 100%;
 }
 
-#day1 p,
-#day2 p,
-#day3 p,
-#day4 p,
-#day5 p {
+#day p {
     padding-top: 10px;
     padding-left: 5px;
 }
 
-#day1 h3,
-#day2 h3,
-#day3 h3,
-#day4 h3,
-#day5 h3 {
+#day h3 {
     padding-top: 10px;
     padding-left: 5px;
 }
