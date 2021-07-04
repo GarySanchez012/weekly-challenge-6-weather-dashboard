@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 82%, rgba(2,0,36,1) 100%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+
+main {
+    display: flex;
+}
+
+.form {
+    width: 30%;
+}
+
+.forecast {
+    width: 70%;
+}
+
+.form,
+.form-submission {
+    margin: 10px;
+}
+
+.submitBtn,
+.submitInput {
+    width: 100%;
+}
+
+.submit {
+    margin: 10px auto;
+}
+
+.submitInput,
+.submitBtn {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    line-height: 2;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.submitInput {
+    padding-left: 10px
+}
+
+.submitBtn {
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-list {
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.forecast-header {
+    display: inline-flex;
+    padding: 10px;
+    padding-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.forecast-current {
+    border: thin solid black;
+    margin-top: 15px;
+}
+
+.forecast-header p {
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.forecast-main p {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.forecast-five-day {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.five-day {
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+#day1,
+#day2,
+#day3,
+#day4,
+#day5 {
+    background-color: rgb(78, 78, 97);
+    color: white;
+    width: 19%;
+    margin-top: 10px;
+    padding-top: 5px;
+    height: 150px;
+}
+
+#day1 p,
+#day2 p,
+#day3 p,
+#day4 p,
+#day5 p {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+#day1 h3,
+#day2 h3,
+#day3 h3,
+#day4 h3,
+#day5 h3 {
+    padding-top: 10px;
+    padding-left: 5px;
+}
