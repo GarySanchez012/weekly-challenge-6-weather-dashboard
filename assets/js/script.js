@@ -35,9 +35,9 @@ var displayData = function (data) {
     displayTemp.textContent = data.main.temp + " f";
     displayWind.textContent = data.wind.speed + " mph";
     displayHumidity.textContent = data.main.humidity + " %";
-    
+    fiveDayForecast(data.coord.lat, data.coord.lon);
 };
-
+//second API
 var displayUVI =
 "https://api.openweathermap.org/data/2.5/onecall?lat=" +
 "41.053429" +
@@ -61,11 +61,12 @@ var displayUV = function(data) {
     // displayImg.setAttribute("src", "https://api.openweathermap.org/img/w/" + data.current.weather[0].icon + ".png")
 }
 
+//button clicked
 submitBtn.addEventListener("click", function (event) {
-    city = submitInput.value
   event.preventDefault();
   searchResults();
     saveHistory();
+    loadHistory();
 
 });
 
@@ -142,27 +143,34 @@ var showFiveDayForecast = function (data) {
     );
   }
 };
-
+//empty array
 var oldSearch = [];
-
+//save item into array
 var saveHistory = function() {
     city = submitInput.value;
-    dataSave = {
-        text: city
-    };
 
-    oldSearch.push(dataSave);
-    localStorage.setItem("text", JSON.stringify(oldSearch))
+
+    oldSearch.push(city);
+    localStorage.setItem("cities", JSON.stringify(oldSearch))
     };
 
 var loadHistory = function() {
-    loadEl = JSON.parse(localStorage.getItem("text"))
+  //pull item(s) from local storage and put into loadEl
+    loadEl = JSON.parse(localStorage.getItem("cities"))
+    searchHistory.innerHTML = "";
+    //loadEl still has info from local storage so clear array
+    oldSearch = [];
+    //array is clear but loadEl still has the old info
     for (let i = 0; i < loadEl.length; i++) {
         var cityList = document.createElement("li");
         cityList.setAttribute("class", "history-list");
-        cityList.textContent = loadEl[i].text;
+        //the text content of city list goes through every item in the loadEl
+        cityList.textContent = loadEl[i];
+        
         
         searchHistory.append(cityList);
+        //pushes all the old data into the cleared array
+        oldSearch.push(loadEl[i]);
     }
 }
 
