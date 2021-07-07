@@ -25,4 +25,4 @@ GIVEN a weather dashboard with form inputs
 https://garysanchez012.github.io/weekly-challenge-6-weather-dashboard/
 
 ### Mock-up
-<img src="./Images/06-server-side-apis-homework-demo.png">
+<img src="./Images/Screenshot 2021-07-07 015258.png">
